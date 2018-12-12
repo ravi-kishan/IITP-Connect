@@ -45,7 +45,7 @@
         </activity>
 
         <!-- <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/> -->
-
+        <activity android:name=".core.fb.feed.FacebookFeedActivity"></activity>
         <activity android:name=".core.profile.ProfileActivity"></activity>
     </application>
 

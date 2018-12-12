@@ -19,6 +19,7 @@ import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.firebase.auth.FirebaseUser;
 import com.iitp.njack.iitp_connect.R;
+import com.iitp.njack.iitp_connect.core.fb.feed.FacebookFeedActivity;
 import com.iitp.njack.iitp_connect.databinding.ActivityHomeBinding;
 import com.iitp.njack.iitp_connect.databinding.MainNavHeaderBinding;
 
@@ -69,6 +70,10 @@ public class HomeActivity extends AppCompatActivity
         };
 
         authViewModel.getFirebaseAuthLiveData().observe(this, authObserver);
+
+        Intent intent = new Intent(this,FacebookFeedActivity.class);
+        this.startActivity(intent);
+
     }
 
     @Override

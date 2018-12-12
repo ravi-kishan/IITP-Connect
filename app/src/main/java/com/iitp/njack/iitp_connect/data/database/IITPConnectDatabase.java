@@ -5,12 +5,16 @@ import android.arch.persistence.room.RoomDatabase;
 
 import com.iitp.njack.iitp_connect.data.contest.Contest;
 import com.iitp.njack.iitp_connect.data.contest.ContestDao;
+import com.iitp.njack.iitp_connect.data.facebook.FacebookPost;
+import com.iitp.njack.iitp_connect.data.facebook.FacebookPostDao;
 import com.iitp.njack.iitp_connect.data.user.User;
 import com.iitp.njack.iitp_connect.data.user.UserDao;
 
-@Database(entities = {Contest.class, User.class}, version = 4)
+@Database(entities = {Contest.class, User.class, FacebookPost.class}, version = 4)
 public abstract class IITPConnectDatabase extends RoomDatabase {
     public abstract ContestDao contestDao();
 
     public abstract UserDao userDao();
+
+    public abstract FacebookPostDao facebookPostDao();
 }
